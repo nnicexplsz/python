@@ -1,0 +1,5 @@
+print('Day Converter Program')
+day = input('Input number of Days --> ')
+print('%s'%day,'Days --> Hour',int(day)*24,'Hour')
+print('%s'%day,'Days --> Minutes',int(day)*24*60,'Minutes')
+print('%s'%day,'Days --> Seconds',int(day)*24*60*60,'Seconds')
