@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect(r'E:\Chawadon_python\week6\Student.db')
+conn = sqlite3.connect(r'E:\Chawadon_python\weekkkk6\Student.db')
 c = conn.cursor()
 # Create table
 '''
@@ -23,7 +23,7 @@ def menu():
 
 def add(fname,lname,email,sex,age,year):
     try :
-        conn = sqlite3.connect(r'E:\Chawadon_python\week6\Student.db')
+        conn = sqlite3.connect(r'E:\Chawadon_python\weekkkk6\Student.db')
         c = conn.cursor()
         sql = '''INSERT INTO students (fname,lname,email,sex,age,year) VALUES (?,?,?,?,?,?)'''
         data = (fname,lname,email,sex,age,year)
@@ -39,7 +39,7 @@ def add(fname,lname,email,sex,age,year):
             conn.close()
 
 def show():
-    conn = sqlite3.connect(r'E:\Chawadon_python\week6\Student.db')
+    conn = sqlite3.connect(r'E:\Chawadon_python\weekkkk6\Student.db')
     c = conn.cursor()
 
     c.execute('''SELECT * FROM students''')
@@ -52,7 +52,7 @@ def show():
     conn.close()
 
 def edit(fname,lname,email,sex,age,year,iid):
-    conn = sqlite3.connect(r'E:\Chawadon_python\week6\Student.db')
+    conn = sqlite3.connect(r'E:\Chawadon_python\weekkkk6\Student.db')
     c = conn.cursor()
     try :
         data = (fname,lname,email,sex,age,year,'{}'.format(iid))
@@ -68,7 +68,7 @@ def edit(fname,lname,email,sex,age,year,iid):
             conn.close()
 
 def delete(del_id):
-    conn = sqlite3.connect(r'E:\Chawadon_python\week6\Student.db')
+    conn = sqlite3.connect(r'E:\Chawadon_python\weekkkk6\Student.db')
     c = conn.cursor()
     try :
         c.execute('DELETE FROM students WHERE id = {}'.format(del_id))
@@ -110,6 +110,4 @@ while True:
 '''"""reset"""     
 DELETE FROM students;
 DELETE FROM sqlite_sequence WHERE name = 'students'
-
-
 '''
