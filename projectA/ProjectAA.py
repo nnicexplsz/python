@@ -241,12 +241,12 @@ while True:
         ps8  = input('อ่อนเพลีย (Y/N) : ')               
         if ps8 == 'Y':
             mah = 1
-        sum = maa+mab+mac+mad+mae+maf+mag+mah
+        sum = maa+mab+mac+mad+mae+maf+mag+mah #อิงตามกระทรวงสาธารณะสุข 
         if sum >= 6 :
             print("="*30)
             print('| ท่านมีอากาศเสี่ยงเป็น  COVID-19  |\n| กรุณาอยู่ในพื้นที่กักตัว 14 วัน       |\n| เฝ้าระวังห้ามใช้สิ่งของร่วมกับคนอื่น   |')
             print("="*30)
-        elif sum <=5:
+        elif sum < 5:
             print("="*29)
             print('| ท่านไม่มีอากาศเสี่ยงเป็น  COVID-19 |\n| มั่นสังเกตอาการตัวเองบ่อยครั้ง |')
             print("="*29)
